@@ -1,17 +1,21 @@
 import style from "./style.module.scss";
-import { Link } from "react-router-dom";
-import imgMercury from '../../assets/Mercury.jpg'
-import imgVenus from '../../assets/Venus.jpg'
-import imgEarth from '../../assets/Earth.jpg'
-import imgMars from '../../assets/Mars.jpg'
-import imgJupiter from '../../assets/Jupiter.jpg'
-import imgSaturn from '../../assets/Saturn.jpg'
-import imgUranus from '../../assets/Uranus.jpg'
-import imgNeptune from '../../assets/Neptune.jpg'
-import imgPluto from '../../assets/Pluto.jpg'
+import { Link, useParams } from "react-router-dom";
+import imgMercury from '../../assets/imgInfo/merc.png'
+import imgVenus from '../../assets/imgInfo/vener.png'
+import imgEarth from '../../assets/imgInfo/zeml.png'
+import imgMars from '../../assets/imgInfo/mars.png'
+import imgJupiter from '../../assets/imgInfo/upit.png'
+import imgSaturn from '../../assets/imgInfo/satu.png'
+import imgUranus from '../../assets/imgInfo/uran.png'
+import imgNeptune from '../../assets/imgInfo/neptun.png'
+import imgPluto from '../../assets/imgInfo/plut.png'
 import { useState } from "react";
+import Comp1 from "../../comp/Comp1/Comp1";
+import { BackgroundImage } from "@mantine/core";
 
 function Home() {
+    const { planetName } = useParams()
+
     const [infoPlanets] = useState([{
         id: 1,
         title: "Mercury",
@@ -60,9 +64,7 @@ function Home() {
     }])
 
     return (
-        <div className={style.wrapper}>
-            {infoPlanets.map((el) => <Link to={`/${el.title}`}> <div className={style.wrapperPlan} ><img className={style.imgWrapper} src={el.img} alt="rimg" /> <h1 className={style.namePlanet}>{el.title}</h1></div></Link>)}
-        </div>
+     <></>
     );
 }
 
