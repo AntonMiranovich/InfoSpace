@@ -13,9 +13,6 @@ function sleep(duration) {
 }
 
 const CssTextField = styled(TextField)({
-    'color': {
-        color:'red'
-    },
     'label': {
         color: '#ffffff'
     },
