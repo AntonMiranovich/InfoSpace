@@ -1,9 +1,9 @@
-// .imgWrapper {
-//     background-repeat: no-repeat;
-//     background-size: contain;
-//     width: 620px;
-//     height: 620px;
-//     border: 10px solid black;
-//     border-radius: 5px;
-// }
-
+.imgWrapper {
+    position: fixed;
+    z-index: -500;
+    bottom:0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 620px;
+    height: 620px;
+}

@@ -10,6 +10,7 @@ import imgUranus from '../../assets/Uranus.jpg'
 import imgNeptune from '../../assets/Neptune.jpg'
 import imgPluto from '../../assets/Pluto.jpg'
 import { useState } from "react";
+import Search from "../../components/Search/Search";
 
 function Home() {
     const [infoPlanets] = useState([{
@@ -60,10 +61,15 @@ function Home() {
     }])
 
     return (
-        <div className={style.wrapper}>
-            {infoPlanets.map((el) => <Link to={`/${el.title}`}> <div className={style.wrapperPlan} ><img className={style.imgWrapper} src={el.img} alt="rimg" /> <h1 className={style.namePlanet}>{el.title}</h1></div></Link>)}
+        <div>
+            <h1 style={{ color: 'white' }}>Planets Info</h1>
+            <Search planetInfo={infoPlanets} />
+            <div className={style.wrapper}>
+                {infoPlanets.map((el) => <Link to={`/${el.title}`}> <div className={style.wrapperPlan} ><img className={style.imgWrapper} src={el.img} alt="rimg" /> <h1 className={style.namePlanet}>{el.title}</h1></div></Link>)}
+            </div>
         </div>
     );
 }
+
 
 export default Home;

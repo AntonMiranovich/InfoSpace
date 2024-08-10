@@ -10,8 +10,7 @@ import imgUranus from '../../assets/imgInfo/uran.png'
 import imgNeptune from '../../assets/imgInfo/neptun.png'
 import imgPluto from '../../assets/imgInfo/plut.png'
 import { useState } from "react";
-import Comp1 from "../../comp/Comp1/Comp1";
-import { BackgroundImage } from "@mantine/core";
+
 
 function Home() {
     const { planetName } = useParams()
@@ -63,8 +62,14 @@ function Home() {
         img: imgPluto
     }])
 
+    const platenInfoPage = infoPlanets.filter(el => el.title == planetName)
+
+
     return (
-     <></>
+        <div className={style.wrapper}>
+            <img className={style.imgWrapper} src={platenInfoPage[0].img} alt="rimg" />
+
+        </div>
     );
 }
 
